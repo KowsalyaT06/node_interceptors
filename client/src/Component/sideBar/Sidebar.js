@@ -5,6 +5,10 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
 import Submenu from "./Submenu";
+
+import { IconContext } from "react-icons/lib";
+
+
 const Nav = styled.div`
   background: black;
   height: 80px;
@@ -30,7 +34,7 @@ const SidebarNav = styled.nav`
   justify-content:center;
   position:fixed;
   top:0;
-  left:${({ sideBar }) => (sideBar ? "0" : "-100%")}
+  left:${({ sideBar }) => (sideBar ? "0" : "-100%")};
   transition: 350ms;
   z-index:10;
   `;
@@ -41,10 +45,14 @@ const SidebarWrap = styled.div`
 const Sidebar = () => {
   const [sideBar, setSidebar] = useState(false);
 
-  const showSidebar = () => setSidebar(!sideBar);
+  const showSidebar = () =>
+    setSidebar(!sideBar);
+    
+  
 
   return (
     <>
+    <IconContext.Provider value={{color:'white'}}>
       <Nav>
         <NavIcon to="#">
           <FaIcons.FaBars onClick={showSidebar} />
@@ -57,9 +65,11 @@ const Sidebar = () => {
           </NavIcon>
           {SidebarData.map((item, index) => {
             return <Submenu item={item} key={index} />;
+            
           })}
         </SidebarWrap>
       </SidebarNav>
+      </IconContext.Provider>
     </>
   );
 };

@@ -1,9 +1,11 @@
 import Sign from "./Component/Signup/Sign";
 import Login from "./Component/Login/Login";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router,Routes, Route,  } from 'react-router-dom';
 import Home from "./Component/Home/Home";
-import Sidebar from "./Component/sideBar/Sidebar";
+ import Sidebar from "./Component/sideBar/Sidebar";
+
+
 function App() {
   return (
     <>
@@ -13,7 +15,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path='/pages' element={<Home/>}/>
           <Route path='/side' element={<Sidebar/>}/>
-        </Routes>
+         
+          
+          </Routes>
       </Router>
     </>
   );

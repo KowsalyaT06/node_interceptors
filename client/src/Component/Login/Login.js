@@ -14,7 +14,7 @@ const Login = () => {
     setInputData({ ...inputData, [e.target.name]: e.target.value });
   };
 let navigate = useNavigate()
-  const handleSubmit =async(e) => {
+  const handleSubmit =async() => {
     axios.post(`${process.env.REACT_APP_SERVER_URL}/login`, inputData)
     .then((res) => {
       console.log("response", res);

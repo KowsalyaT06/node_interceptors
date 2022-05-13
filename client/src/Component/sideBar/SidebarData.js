@@ -7,21 +7,31 @@ import * as BiIcons from "react-icons/bi";
 export const SidebarData = [
   {
     title: "Home",
-    path: "/home",
+    path: "/side",
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
     subNav: [
       {
         title: "users",
-        path: "/Home/users",
+        path: "/side",
         icon: <IoIcons.IoIosPerson />,
-      },
+        subNav2: [
+          {
+            title: "Privacy2",
+            path: "/side",
+          },
+          {
+            title: "Privacy3",
+            path: "/side",
+          },
+        ]
+      }
     ],
   },
   {
     title: "Share",
-    path: "/share",
+    path: "/side",
     icon: <RiIcons.RiShareFill />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -44,13 +54,13 @@ export const SidebarData = [
     ],
   },
   {
-      title:'Notification',
-      path:'/notify',
-      icon:<IoIcons.IoIosNotifications/>
+    title: "Notification",
+    path: "/notify",
+    icon: <IoIcons.IoIosNotifications />,
   },
   {
     title: "Category",
-    path: "/category",
+    path: "/side",
     icon: <BiIcons.BiCategory />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -74,23 +84,36 @@ export const SidebarData = [
   },
   {
     title: "Settings",
-    path: "/settings",
+    path: "/side",
     icon: <RiIcons.RiSettings4Fill />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
+
     subNav: [
       {
         title: "General Settings",
         path: "/setting/general",
-        },
+      },
+
       {
         title: "Account",
         path: "/setting/account",
-        },
+      },
       {
         title: "Privacy",
-        path: "/setting/privacy",
-       },
+        path: "/side",
+      
+        subNav2: [
+          {
+            title: "Privacy2",
+            path: "/side",
+          },
+          {
+            title: "Privacy3",
+            path: "/side",
+          },
+        ],
+      },
     ],
   },
 ];

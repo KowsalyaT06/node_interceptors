@@ -13,7 +13,7 @@ const Sign = () => {
     setInput({ ...input, [e.target.name]: e.target.value });
   };
 let navigate = useNavigate()
-  const handleSubmit = async (e) => {
+  const handleSubmit = async () => {
     axios.post(`${process.env.REACT_APP_SERVER_URL}/sign`, input)
     .then((response) => {
       console.log("response", response);
